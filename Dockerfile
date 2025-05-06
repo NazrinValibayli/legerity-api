@@ -26,7 +26,9 @@ RUN python -m venv /py && \
         django-user && \
     mkdir -p /vol/web/media && \
     mkdir -p /vol/web/static && \
+    mkdir -p /var/www/certbot/.well-known/acme-challenge && \
     chown -R django-user:django-user /vol && \
+    chmod -R 755 /var/www/certbot && \
     chmod -R 755 /vol && \
     chmod -R +x /scripts
 
